@@ -72,7 +72,7 @@ document.onkeyup = function (event) {
     lettersGuessed = new Set();
     guessesRemaining = 12;
     correctLetterCount = 0;
-    
+
     refreshGameArea();
     state = "playing";
   }
