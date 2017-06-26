@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #000;
+    /*background: url("../images/4335932-dancing-bears-grateful-dead-wallpaper.jpg");*/
+    background-color: #000;
+}
+
+.hero-container {
+}
+
+.container {
+    padding: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.jumbotron {
+    background: url("../images/grateful-dead-hero.jpg");
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+}
+
+.main-container {
+    /*background: url("../images/4335932-dancing-bears-grateful-dead-wallpaper.jpg");*/
+    background: url("../images/4335932-dancing-bears-grateful-dead-wallpaper.jpg");
+}
+
+.game-field {
+    height: 500px;
+}
+
+.game-field div {
+    height: 100%;
+    font-size: 24px;
+}
+
+#youtube-iframe {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /*width: 320px;*/
+    /*height: 180px;*/
+    width: 400px;
+    height: 225px;
+    display: none;
+}
+
+#youtube-iframe-placeholder {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /*width: 320px;*/
+    /*height: 180px;*/
+    width: 400px;
+    height: 225px;
+
+}
+
+.display-area {
+    color: #59b98f;
+    background-size: auto;
+    background-color: #b41f3c;
+    background-size: cover;
+    height: 100%;
+ }
+
+.output-text {
+
+}
+
+.game-area {
+    background-color: #59b98f;
+    color: #b41f3c;
+    opacity: 80;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    line-height: 40px;
+}
+.game-area-output-text {
+    color: #000;
+    font-size: 32px;
+    line-size: 50px;
+}
+
+.game-area * {
+}

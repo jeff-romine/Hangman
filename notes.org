@@ -1,0 +1,32 @@
+#+TITLE:     Hangman Nontes
+#+AUTHOR:    Jeff Romine
+#+EMAIL:     jromineut@gmail.com
+#+DATE:      2017-06-24 Sat
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+OPTIONS: ^:{} author:nil email:nil creator:nil timestamp:nil
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:
+#+LINK_HOME:
+#+XSLT:
+#+STARTUP: showeverything
+
+
+[[https://www.google.com/imgres?imgurl%3Dhttp%253A%252F%252Fwww.nmgncp.com%252Fdata%252Fout%252F93%252F4336069-dancing-bears-grateful-dead-wallpaper.jpg&imgrefurl%3Dhttp%253A%252F%252Fwww.nmgncp.com%252Fdancing-bears-grateful-dead-wallpaper.html&docid%3DRZKO8Inqe2445M&tbnid%3D-gNogA_c6iN2fM%253A&vet%3D10ahUKEwjY1Lm5h9jUAhUQ5WMKHVevCI8QMwhSKCEwIQ..i&w%3D1290&h%3D311&bih%3D799&biw%3D1440&q%3Dgrateful%2520dead%2520bears%2520gif&ved%3D0ahUKEwjY1Lm5h9jUAhUQ5WMKHVevCI8QMwhSKCEwIQ&iact%3Dmrc&uact%3D8][Dancing Bears Grateful Dead Wallpaper]]
+
+[[file:assets/images/4335932-dancing-bears-grateful-dead-wallpaper.jpg][file:~/src/Hangman/assets/images/4335932-dancing-bears-grateful-dead-wallpaper.jpg]]
+
+
+[[http://www.nmgncp.com/dancing-bears-grateful-dead-wallpaper/4335932.html]]
+
+http://www.dead.net/sites/all/favicon.ico
+
+
+** Make columns the same height:
+
+[[https://stackoverflow.com/questions/19695784/how-can-i-make-bootstrap-columns-all-the-same-height?noredirect%3D1&lq%3D1][https://stackoverflow.com/questions/19695784/how-can-i-make-bootstrap-columns-all-the-same-height?noredirect=1&lq=1]]
