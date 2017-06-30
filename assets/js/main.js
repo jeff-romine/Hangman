@@ -4,27 +4,27 @@
 
 
 var wordTable = {
-  "magnolia": {
+  "MAGNOLIA": {
     title: "Sugar Magnolia",
     src: "https://www.youtube.com/embed/nkKuhAxcH7g"
   },
-  "althea": {
+  "ALTHEA": {
     title: "Althea",
     src: "https://www.youtube.com/embed/N7lMxNfb7rw"
   },
-  "brokedown": {
+  "BROKEDOWN": {
     title: "Brokedown Palace",
     src: "https://www.youtube.com/embed/A9uyMjzmT3k"
   },
-  "palace": {
+  "PALACE": {
     title: "Brokedown Palace",
     src: "https://www.youtube.com/embed/A9uyMjzmT3k"
   },
-  "begonias": {
+  "BEGONIAS": {
     title: "Scarlet Begonias",
     src: "https://www.youtube.com/embed/xgPLFYNEL1A"
   },
-  "scarlet": {
+  "SCARLET": {
     title: "Scarlet Begonias",
     src: "https://www.youtube.com/embed/xgPLFYNEL1A"
   }
@@ -39,10 +39,12 @@ var displayWordArr;
 var words = Object.keys(wordTable);
 
 function setElementTextById(id, value) {
+  "use strict";
   document.getElementById(id).textContent = value;
 }
 
 function refreshGameArea() {
+  "use strict";
   setElementTextById("display-word", displayWordArr.join(" "));
   setElementTextById("guesses-remaining", "" + guessesRemaining);
   setElementTextById("letters-guessed", Array.from(lettersGuessed).join(","));
@@ -59,11 +61,12 @@ function updateDisplay(videoData) {
 }
 
 function isAlpha(ch){
+  "use strict";
   return /^[A-Z]$/i.test(ch);
 }
 
 document.onkeyup = function (event) {
-
+  "use strict";
   var letter = event.key.toUpperCase();
 
   if (state === "init") {
@@ -78,9 +81,10 @@ document.onkeyup = function (event) {
   }
   else if (state === "playing") {
 
-    if ((letter.length) > 1 || !isAlpha(letter)) {
+    if ((letter.length > 1) || !isAlpha(letter)) {
       return;
     }
+
     if (!lettersGuessed.has(letter)) {
       lettersGuessed.add(letter);
 
@@ -92,20 +96,18 @@ document.onkeyup = function (event) {
             }
             displayWordArr[i] = letter;
             correctLetterCount++;
-            guessesRemaining--;
           }
         }
       }
-      else {
-        guessesRemaining--;
-      }
+      guessesRemaining--;
 
       if (correctLetterCount == currentWordArr.length) {
-        updateDisplay(wordTable[currentWordArr.join("").toLowerCase()]);
+        updateDisplay(wordTable[currentWordArr.join("")]);
         state = "init";
       }
       else if (0 === guessesRemaining) {
-        state = "lost";
+
+        state = "init";
       }
 
     }
