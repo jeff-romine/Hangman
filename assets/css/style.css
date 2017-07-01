@@ -93,3 +93,9 @@ body {
     line-size: 50px;
 }
 
+#instructions {
+}
+#guess {
+    display: none;
+}
+
