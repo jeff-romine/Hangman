@@ -77,13 +77,8 @@ body {
     height: 100%;
  }
 
-.output-text {
-
-}
-
-.game-area {
+#game-area {
     font-family: Storybook, Arial, "Helvetica Neue", Helvetica, sans-serif;
-    
     background-color: #59b98f;
     color: #b41f3c;
     opacity: 80;
@@ -98,5 +93,3 @@ body {
     line-size: 50px;
 }
 
-.game-area * {
-}

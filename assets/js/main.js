@@ -45,6 +45,7 @@ function setElementTextById(id, value) {
 
 function refreshGameArea() {
   "use strict";
+  /* TODO Re-write with jQuery */
   setElementTextById("display-word", displayWordArr.join(" "));
   setElementTextById("guesses-remaining", "" + guessesRemaining);
   setElementTextById("letters-guessed", Array.from(lettersGuessed).join(","));
@@ -52,6 +53,9 @@ function refreshGameArea() {
 
 function updateDisplay(videoData) {
   "use strict";
+  /* Show song title with guessed word highlighted above video" */
+  /* TODO Re-write with jQuery */
+
   var iframeElement = document.getElementById("youtube-iframe");
   var placeHolder = document.getElementById("youtube-iframe-placeholder");
 
@@ -60,7 +64,7 @@ function updateDisplay(videoData) {
   iframeElement.style.display = "block";
 }
 
-function isAlpha(ch){
+function isAlpha(ch) {
   "use strict";
   return /^[A-Z]$/i.test(ch);
 }
@@ -77,9 +81,9 @@ document.onkeyup = function (event) {
     correctLetterCount = 0;
 
     refreshGameArea();
-    state = "playing";
+    state = "guess";
   }
-  else if (state === "playing") {
+  else if (state === "guess") {
 
     if ((letter.length > 1) || !isAlpha(letter)) {
       return;
@@ -89,24 +93,25 @@ document.onkeyup = function (event) {
       lettersGuessed.add(letter);
 
       if (currentWordArr.includes(letter)) {
-        for (var i = 0; i < currentWordArr.length; i++) {
-          if (currentWordArr[i] == letter) {
+
+        currentWordArr.forEach(function (currentLetter, i) {
+          if (currentLetter === letter) {
+
             if (displayWordArr[i] !== "_") {
               console.log("ERROR: \"" + letter + "\" has already been replaced in display word");
             }
             displayWordArr[i] = letter;
-            correctLetterCount++;
+            correctLetterCount+=1;
           }
-        }
+        });
       }
-      guessesRemaining--;
+      guessesRemaining-=1;
 
       if (correctLetterCount == currentWordArr.length) {
         updateDisplay(wordTable[currentWordArr.join("")]);
         state = "init";
       }
       else if (0 === guessesRemaining) {
-
         state = "init";
       }
 
