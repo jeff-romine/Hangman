@@ -66,7 +66,6 @@ $(document).ready(function () {
   function displayPlaceholder() {
     "use strict";
     /* Show song title with guessed word highlighted above video" */
-    /* TODO Re-write with jQuery */
     $("#youtube-iframe").hide();
     $("#youtube-iframe-placeholder").show();
     $("#youtube-iframe").attr("src","");

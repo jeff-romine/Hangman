@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 @font-face { font-family: Storybook; src: url('../fonts/Storyboo.TTF'); }
 
 body {
@@ -40,13 +41,14 @@ body {
     height: 515px;
 }
 
+
 .game-field div {
     height: 100%;
     font-size: 24px;
 }
 
+
 #youtube-iframe {
-    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
 
@@ -54,11 +56,11 @@ body {
     /*height: 180px;*/
     width: 560px;
     height: 315px;
+    text-align: center;
     display: none;
 }
 
 #youtube-iframe-placeholder {
-    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
 
@@ -66,10 +68,11 @@ body {
     /*height: 180px;*/
     width: 560px;
     height: 315px;
-
+    text-align: center;
 }
 
-.display-area {
+#display-area {
+    padding-top: 100px;
     color: #59b98f;
     background-size: auto;
     background-color: #b41f3c;
@@ -78,23 +81,34 @@ body {
  }
 
 #game-area {
+    padding-top: 100px;
     font-family: Storybook, Arial, "Helvetica Neue", Helvetica, sans-serif;
     background-color: #59b98f;
-    color: #b41f3c;
     opacity: 80;
     text-align: center;
     padding-top: 20px;
     font-size: 20px;
     line-height: 40px;
+    color: #b41f3c;
 }
+.game-area-prompt-text {
+    font-size: 32px;
+    line-size: 50px;
+    color: #b41f3c;
+}
+
 .game-area-output-text {
     color: #000;
     font-size: 32px;
     line-size: 50px;
 }
 
-#instructions {
+#instructions,
+#guess
+{
+    padding-top: 100px;
 }
+
 #guess {
     display: none;
 }
